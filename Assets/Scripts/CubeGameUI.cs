@@ -6,7 +6,9 @@ using TMPro;
 
 public class CubeGameUI : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public TextMeshProUGUI TimerText;
+    public float Timer;
+    
     void Start()
     {
         
@@ -15,6 +17,7 @@ public class CubeGameUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Timer += Time.deltaTime;
+        TimerText.text = "생존 시간 : " + Timer.ToString("0.00");
     }
 }
