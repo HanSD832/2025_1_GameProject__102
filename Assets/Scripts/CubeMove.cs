@@ -10,7 +10,7 @@ public class CubeMove : MonoBehaviour
     {
         transform.Translate(0, 0, -moveSpeed * Time.deltaTime);
 
-        if (transform.position.z < -20)
+        if (transform.position.z < -10)
         {
             Destroy(gameObject);
         }
